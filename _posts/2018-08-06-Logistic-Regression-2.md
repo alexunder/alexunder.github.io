@@ -120,11 +120,14 @@ $$\frac{\partial J}{\partial b}=\frac{\partial J}{\partial A} \frac{\partial A}{
 
 $$\frac{\partial J}{\partial b} = - \frac{1}{m} \sum_{i=1}^m(\frac{y^{(i)}}{a^{(i)}} - \frac{1 - y^{(i)}}{1 - a^{(i)}}) (1 - A)A $$
 
-$$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)} - y^{(i)})$$  这里是因为$\frac{\partial Z}{\partial b}=(w^T X + b)'=1$
+$$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)} - y^{(i)})$$ 
+
+这里是因为$\frac{\partial Z}{\partial b}=(w^T X + b)'=1$
 
 # 最后结论总结
 
 再把结果综合一下在这里：
+
 $$ \frac{\partial J}{\partial w} = \frac{1}{m}X(A-Y)^T$$
 
 $$ \frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)}-y^{(i)})$$
