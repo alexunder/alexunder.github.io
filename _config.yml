@@ -1,0 +1,15 @@
+destination: ./_site
+server: true
+auto:        true
+lsi:         false
+server_port: 4000
+permalink:   date
+markdown: kramdown 
+pygments: true
+highlighter: rouge
+
+kramdown:
+  input:  GFM
+rdiscount:
+  extensions: 
+      - smart

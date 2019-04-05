@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>{{ page.title }}</title>
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/pygments/pygments.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+
+	<!-- MathJax Section -->
+
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script>
+	MathJax.Hub.Config({
+		tex2jax: {
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+		},
+		"HTML-CSS": {
+		    minScaleAdjust: 130        // don't reduce font size to match surrounding font
+	    }
+	});
+	
+	MathJax.Hub.Queue(function() {
+		var all = MathJax.Hub.getAllJax(), i;
+		for(i=0; i < all.length; i += 1) {
+			all[i].SourceElement().parentNode.className += ' has-jax';
+		}
+	});
+	</script>
+
+<!-- Typekit -->
+</head>
+<body>
+
+<div class="site">
+  <div class="title">
+    <a href="/">Alexunder Hacking</a>
+    <a class="extra" href="/blog.html">Blog</a>
+    <a class="extra" href="/notes.html">Technology Notes</a>
+  </div>
+ 
+ {{ content }}
+
+<div class="footer">
+    <div class="contact">
+      <p>
+        Alexunder Hsu<br />
+        xalexu@gmail.com
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        <a href="http://github.com/alexunder">github.com/alexunder</a><br />
+        <a href="http://twitter.com/chenyuxu">twitter.com/chenyuxu</a><br />
+      </p>
+    </div>
+</div>
+
+<a href="http://github.com/alexunder"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6016902-1");
+pageTracker._trackPageview();
+</script>
+<!-- Google Analytics end -->
+
+</body>
+</html>
