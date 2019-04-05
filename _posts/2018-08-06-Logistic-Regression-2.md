@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Logistic Regression 2: 简单神经网络的反向传播推导
+title: Logistic Regression 2 --- 简单神经网络的反向传播推导
 category: Machine Learning
 ---
 

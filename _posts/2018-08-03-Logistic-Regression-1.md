@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Logistic Regression 1: 一元线性回归
+title: Logistic Regression 1 --- 一元线性回归
 category: Machine Learning
 ---
 
