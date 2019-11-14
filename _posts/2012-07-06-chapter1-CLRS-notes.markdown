@@ -61,7 +61,7 @@ int bin_search(int a[],int start,int end,int key)
 }    
 {% endhighlight %}
 
-他的性能公式应为：`\(T(n) = T(\frac{n}{2}) + \Theta(1)\)`
+他的性能公式应为：$T(n) = T(\frac{n}{2}) + \Theta(1)$
 
 
 接下来我们看看怎么解决递归式，《算法导论》里提供了三种方法来解决：
