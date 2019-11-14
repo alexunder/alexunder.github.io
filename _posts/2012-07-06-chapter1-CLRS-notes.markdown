@@ -19,15 +19,15 @@ category: algorithms
 
 1. O标记是我们最常见的标记，简称Big-O-notation，他定义如下：
 
-   $O[g(n)]=$ \{f(n): 存在正整数c和n0使得$0 \leq f(n) \leq cg(n)$对于所有的$n \geq n0$ 都成立. \}
+   $O[g(n)]=$ \{ $f(n)$: 存在正整数c和n0使得$0 \leq f(n) \leq cg(n)$对于所有的$n \geq n0$ 都成立. \}
 
    从定义中可看出，O标记定义了f(n)的上界，也就是说算法真正的时间复杂度函数永远不会超过O[g(n)]，这也是O标记如此常用的原因，因为我们大多是在分析算法在最坏情况下的性能.
 
-2. `\(\Omega[g(n)] = \{f(n)\)`：存在正整数c和n0使得`\(0 \leq cg(n) \leq f(n)\)`对于所有的`\(n \geq n0 \)`都成立}.
+2. $\Omega[g(n)]$ = \{ $f(n)$：存在正整数c和n0使得$ 0 \leq cg(n) \leq f(n) $对于所有的$ n \geq n0 $ 都成立. \}
 
    这个很明显是定义了性能函数的下界，通俗的说就是最好，最理想的状况。
 
-3. `\(\Theta[g(n)] = \{f(n)\)`：存在正整数c1，c2和n0使得`\(c1g(n) \leq f(n) \leq c2g(n)\)`对于所有的`\(n \geq n0 \)`都成立}.
+3. $\Theta[g(n)]$ = \{ $f(n)$：存在正整数c1，c2和n0使得 $c1g(n) \leq f(n) \leq c2g(n) $ 对于所有的$ n \geq n0 $ 都成立. \}
 
 
 ## 递归算法
@@ -74,15 +74,15 @@ int bin_search(int a[],int start,int end,int key)
 
 关于主方法，还是先回到那个递归通用公式：
 
-`\[
+$$
 T(n) = aT(\frac{n}{b}) + f(n) ，a\geq 1 ， b>1
-\]`
+$$
 
-n/b不一定是整数，所以n/b可以是`\(\lceil \frac{n}{b} \rceil \)`或者`\(\lfloor \frac{n}{b} \rfloor\)`。我们将用`\(f(n)\)`与`\(n^{\log_b a}\)`比较的结果来推测T(n)。
+n/b不一定是整数，所以n/b可以是$ \lceil \frac{n}{b} \rceil $ 或者$ \lfloor \frac{n}{b} \rfloor $。我们将用 $ f(n) $与$ n^{\log_b a} $比较的结果来推测T(n)。
 
-1. 当`\(f(n) = O(n^{\log_b a - \varepsilon}), \varepsilon > 0\)`可得`\(T(n) = \Theta(n^{\log_b a})\)`.
-2. 当`\(f(n) = \Theta(n^{log_b a})\)`, 则`\(T(n) = \Theta(n^{log_b a}\lg n)\)`.
-3. 当`\(f(n) = \Omega(n^{\log_b a + \varepsilon}), \varepsilon > 0\)`,并且如果`\(a f(\frac{n}{b}) \leq cf(n)\)`,且`\(c < 1\)`,以及n可以是足够大，则`\(T(n) = \Theta(f(n))\)`.
+1. 当$f(n) = O(n^{\log_b a - \varepsilon}), \varepsilon > 0$ 可得$T(n) = \Theta(n^{\log_b a})$.
+2. 当$f(n) = \Theta(n^{log_b a})$, 则$T(n) = \Theta(n^{log_b a}\lg n)$.
+3. 当$f(n) = \Omega(n^{\log_b a + \varepsilon}), \varepsilon > 0$,并且如果$ a f(\frac{n}{b}) \leq cf(n)$,且$c < 1$,以及n可以是足够大，则$T(n) = \Theta(f(n))$.
 
 当然这三种情况没有覆盖所有的可能，即类似下图这个样子：
 
@@ -90,19 +90,19 @@ n/b不一定是整数，所以n/b可以是`\(\lceil \frac{n}{b} \rceil \)`或者
 
 Case1和Case2以及Case2和Case3之间都有缝隙。我们先来看看第一个缝隙，在Case1的情況下，
 
-`\(f(n) = O(n^{\log_b a - \varepsilon})\)`
+$f(n) = O(n^{\log_b a - \varepsilon})$
 
 从前面O-notation的定义推得：
 
-`\(f(n) \leq Kn^{log_b a}\)`
+$f(n) \leq Kn^{log_b a}$
 
-又因为Case2是：`\(f(n) = \Theta(n^{log_b a})\)`，可以得到不等式：
+又因为Case2是：$f(n) = \Theta(n^{log_b a})$，可以得到不等式：
 
-`\(K_1 n^{log_b a} \leq f(n) \leq K_2 n^{log_b a}\)`
+$K_1 n^{log_b a} \leq f(n) \leq K_2 n^{log_b a}$
 
-由此可知 `\(f(n) = O(n^{\log_b a - \varepsilon})\)` 表示`\(f(n)\)`必須乘以`\(n^{\varepsilon}\)`才能和Case2的`\(n^{log_b a}\)`相提并论，其他类似但是不属于以上集合的情况均落在缝隙中，使主方法失效。比如：
+由此可知 $f(n) = O(n^{\log_b a - \varepsilon})$ 表示$f(n)$必須乘以$n^{\varepsilon}$才能和Case2的$n^{log_b a}$相提并论，其他类似但是不属于以上集合的情况均落在缝隙中，使主方法失效。比如：
 
-`\(f(n) = O(\frac{n^{log_b a}}{c})\)`
+$f(n) = O(\frac{n^{log_b a}}{c})$
 
 当然，Case2与Case3之间也有类似的指数级别的相乘量，不仅如此，Case3还有一些不等式上的限制，如果不满足这些条件，亦会落入缝隙中。处在缝隙中，主方法无能为力。其实，这三种情况已能覆盖绝大部分递归求解的情况，所以我们不用在缝隙中纠结了。
 
