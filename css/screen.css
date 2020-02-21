@@ -93,7 +93,7 @@ ul.posts {
 .site {
   font-size: 110%;
   text-align: justify;
-  width: 58em;
+  width: 100%;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
 }
@@ -116,7 +116,7 @@ ul.posts {
   .site .title a.extra {
     color: #aaa;
     text-decoration: none;
-    margin-left: 1em;
+    margin-left: 0em;
   }
 
   .site .title a.extra:hover {
