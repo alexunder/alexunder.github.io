@@ -19,12 +19,12 @@ body {
   color: #000;
   background-color: #fdfdfd;
   /*font-family: "Calibri" "Microsoft Consola", "Segoe UI" ! important;*/
-  font-family: "Calibri" ! important;
+  font-family: "Source Code Pro Regular" ! important;
   /*font: 13.34px "Segoe UI", arial, clean, sans-serif;*/
   position: relative;
   font-size: 18px;
   text-align: center;
-  margin: auto 10px;
+  margin: auto 1px;
 }
 
 h1, h2, h3, h4, h5, h6 {
