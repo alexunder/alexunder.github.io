@@ -80,7 +80,7 @@ ul.posts {
   ul.posts span {
     color: #aaa;
     /*font-family: Monaco, "Courier New", monospace;*/
-	font-family: "Segoe UI", serif;	
+	font-family: "Source Code Pro Regular", serif;
     font-size: 80%;
   }
 
@@ -93,7 +93,7 @@ ul.posts {
 .site {
   font-size: 110%;
   text-align: justify;
-  width: 100%;
+  width: 80em;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
 }
@@ -191,7 +191,7 @@ ul.posts {
 
 
   code.has-jax {
-    font: inherit; 
+    font: inherit;
     font-size: 120%;
     border: inherit;
     color: black;
@@ -221,24 +221,24 @@ ul.posts {
 .clear {clear: both;}
 
 body div.content {}
-  
+
 body div.content pre {
   background-color: #fff;
   padding: 0.4em 1em;
   border-left: 2px solid #fff;
 }
-		
+
 body div.content code {
    background-color: #fff;
    padding: 0 0.1em;
 }
-												
+
 body div.content pre > code {
   padding: 0; background-color: transparent;
 }
 
 body div.content code.has-jax {
-  font: inherit; 
+  font: inherit;
   font-size: 120%;
   background: inherit;
   border: inherit;
