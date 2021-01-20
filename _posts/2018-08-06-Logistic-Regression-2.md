@@ -21,7 +21,7 @@ category: Machine Learning
 对于一个实例数据 $x^{(i)}$:
 
 $$z^{(i)} = w^T x^{(i)} + b $$
-$$\hat{y}^{(i)} = a^{(i)} = sigmoid(z^{(i)})$$ 
+$$\hat{y}^{(i)} = a^{(i)} = sigmoid(z^{(i)})$$
 $$ \mathcal{L}(a^{(i)}, y^{(i)}) =  - y^{(i)}  \log(a^{(i)}) - (1-y^{(i)} )  \log(1-a^{(i)})$$
 
 简单解释一下，其实要解释的内容也正是逻辑回归的精髓，不知道只言片语可否表达清楚。式子1表示的是神经网络节点的前半段的计算，即多元线性回归，其中向量w和b是学习算法想要找到或者说训练的参数，这和一元线性回归是一样的，即找到一个最优的直线，多元回归则是找到最优的超平面。但是逻辑回归要求输出的值只有1或者0，所以必须加上式子2的补充， 即sigmoid函数，sigmoid函数定义如下：
@@ -68,9 +68,9 @@ $$ J = \frac{1}{m} \sum_{i=1}^m (- y^{(i)}  \log(a^{(i)}) - (1-y^{(i)} )  \log(1
 再加上其他前向计算公式:
 
 $$Z = w^T X + b$$
-$$\hat{Y} = A = sigmoid(Z)$$ 
+$$\hat{Y} = A = sigmoid(Z)$$
 
-##a. 先求$\frac{\partial J}{\partial w}$ 
+##a. 先求$\frac{\partial J}{\partial w}$
 
 通过链式求导得：
 
@@ -82,7 +82,7 @@ $$ \left\{
 \right.
 $$
 
-A是$a^{(i)}$组成的向量，所以先直接对J求A的偏导数得： 
+A是$a^{(i)}$组成的向量，所以先直接对J求A的偏导数得：
 
 $$\frac{\partial J}{\partial A}= - \frac{1}{m} \sum_{i=1}^m(\frac{y^{(i)}}{a^{(i)}} - \frac{1 - y^{(i)}}{1 - a^{(i)}})   $$
 
@@ -120,7 +120,7 @@ $$\frac{\partial J}{\partial b}=\frac{\partial J}{\partial A} \frac{\partial A}{
 
 $$\frac{\partial J}{\partial b} = - \frac{1}{m} \sum_{i=1}^m(\frac{y^{(i)}}{a^{(i)}} - \frac{1 - y^{(i)}}{1 - a^{(i)}}) (1 - A)A $$
 
-$$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)} - y^{(i)})$$ 
+$$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)} - y^{(i)})$$
 
 这里是因为$\frac{\partial Z}{\partial b}=(w^T X + b)'=1$
 
